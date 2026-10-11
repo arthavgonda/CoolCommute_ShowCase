@@ -69,10 +69,6 @@ export default function Showcase() {
           >
             <source src="/CommuteVedio/commute.mov" type="video/quicktime" />
             <source src="/CommuteVedio/commute.mp4" type="video/mp4" />
-            <source
-              src="/CommuteVedio/WhatsApp Video 2026-10-11 at 01.15.43.mp4"
-              type="video/mp4"
-            />
             Your browser does not support the video tag.
           </video>
         </div>
