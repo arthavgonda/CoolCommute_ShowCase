@@ -13,7 +13,7 @@ const options = [
     key: "web",
     icon: Globe,
     title: "Open the web app",
-    detail: "Runs in any modern browser. No install or account setup needed.",
+    detail: "Try coolCommute on web",
     href: webAppUrl,
   },
   {
@@ -21,7 +21,7 @@ const options = [
     icon: Smartphone,
     title: "Install on iPhone",
     detail:
-      "Join the beta through TestFlight. Requires the free TestFlight app from the App Store.",
+      "Try coolCommute on iPhone(required Testflight)",
     href: testflightUrl,
   },
 ].filter((option) => option.href);
