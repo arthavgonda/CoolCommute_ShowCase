@@ -2,7 +2,7 @@ import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight } from "lucide-react";
-import { repoUrl } from "@/data/content";
+import { testflightUrl, webAppUrl } from "@/data/content";
 import { scrollToTarget } from "@/lib/scroll";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -86,11 +86,29 @@ export default function Footer({ onOpen }) {
               </span>
               <ul className="flex flex-col gap-3.5">
                 <li>
-                  <a href={repoUrl} target="_blank" rel="noopener noreferrer" className={linkClass}>
-                    GitHub
+                  <a
+                    href={webAppUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={linkClass}
+                  >
+                    Web app
                     <ArrowUpRight className="size-3.5" />
                   </a>
                 </li>
+                {testflightUrl ? (
+                  <li>
+                    <a
+                      href={testflightUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={linkClass}
+                    >
+                      TestFlight
+                      <ArrowUpRight className="size-3.5" />
+                    </a>
+                  </li>
+                ) : null}
                 <li>
                   <button type="button" className={linkClass} onClick={() => onOpen("team")}>
                     Meet the team

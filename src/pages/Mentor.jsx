@@ -10,6 +10,7 @@ import TechSection from "@/components/TechSection";
 import Showcase from "@/components/Showcase";
 import Footer from "@/components/Footer";
 import LegalDialog from "@/components/LegalDialog";
+import GetAppDialog from "@/components/GetAppDialog";
 import { startScroll, stopScroll } from "@/lib/scroll";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -18,6 +19,7 @@ const Scene = lazy(() => import("@/components/scene/Scene"));
 
 export default function Mentor() {
   const [dialog, setDialog] = useState(null);
+  const [appOpen, setAppOpen] = useState(false);
   const [motionOk, setMotionOk] = useState(true);
 
   useEffect(() => {
@@ -66,9 +68,9 @@ export default function Mentor() {
           <Scene />
         </Suspense>
       ) : null}
-      <Nav />
+      <Nav onGet={() => setAppOpen(true)} />
       <main className="relative">
-        <Hero />
+        <Hero onGet={() => setAppOpen(true)} />
         <Problems />
         <Process />
         <Features />
@@ -77,6 +79,7 @@ export default function Mentor() {
       </main>
       <Footer onOpen={setDialog} />
       <LegalDialog type={dialog} onClose={() => setDialog(null)} />
+      <GetAppDialog open={appOpen} onOpenChange={setAppOpen} />
     </div>
   );
 }

@@ -1,15 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { navLinks, repoUrl } from "@/data/content";
+import { navLinks } from "@/data/content";
 import { scrollToTarget } from "@/lib/scroll";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Nav() {
+export default function Nav({ onGet }) {
   const [solid, setSolid] = useState(false);
   const [active, setActive] = useState(null);
   const bar = useRef(null);
@@ -104,11 +103,8 @@ export default function Nav() {
           ))}
         </nav>
 
-        <Button asChild size="sm" variant="outline">
-          <a href={repoUrl} target="_blank" rel="noopener noreferrer">
-            Get CoolCommute
-            <ArrowUpRight />
-          </a>
+        <Button size="sm" variant="outline" onClick={onGet}>
+          Get CoolCommute
         </Button>
       </div>
       <div

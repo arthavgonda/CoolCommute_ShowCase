@@ -9,7 +9,9 @@ import {
   MapPin,
 } from "lucide-react";
 
-export const repoUrl = "https://github.com/arthavgonda/CoolCommute";
+export const webAppUrl = "https://main.douxpwre6iwu3.amplifyapp.com/";
+
+export const testflightUrl = "";
 
 export const navLinks = [
   { label: "Problem", href: "#problem", id: "problem" },
@@ -180,16 +182,16 @@ export const profileExample = `{
 }`;
 
 export const team = [
-    {
-    initials: "AN",
-    name: "Anoop S Negi",
-    role: "Core Architect, Routing Systems, Design",
-    href: "https://www.linkedin.com/in/anoopsnegi/",
-  },
   {
     initials: "AD",
     name: "Aman Deep",
-    role: " Mobile Integration, Designer",
+    role: "Core Architect, Mobile and Cloud Integration",
     href: "https://www.linkedin.com/in/aman-deep-74300b28b/",
+  },
+  {
+    initials: "AN",
+    name: "Anoop S Negi",
+    role: "Full-Stack Engineer, Climate Routing Systems",
+    href: "https://www.linkedin.com/in/anoopsnegi/",
   },
 ];

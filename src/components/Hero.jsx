@@ -16,7 +16,7 @@ const lines = [
   { text: "cool.", italic: true },
 ];
 
-export default function Hero() {
+export default function Hero({ onGet }) {
   const root = useRef(null);
   useScenePreset(root, "hero", "top 80%", "bottom 55%");
 
@@ -73,8 +73,8 @@ export default function Hero() {
           you toward public transit, tuned to how you actually travel.
         </p>
         <div data-hero-fade className="mt-10 flex flex-wrap items-center gap-3">
-          <Button size="lg" onClick={() => scrollToTarget("#process")}>
-            See how it works
+          <Button size="lg" variant="accent" onClick={onGet}>
+            Get the app
             <ArrowRight />
           </Button>
           <Button size="lg" variant="outline" onClick={() => scrollToTarget("#showcase")}>
